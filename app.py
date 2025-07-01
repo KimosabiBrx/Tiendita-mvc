@@ -1,7 +1,7 @@
 from flask import Flask, render_template, session, redirect, url_for
 
 app = Flask(__name__)
-app.secret_key = '121212'
+app.secret_key = 'df565a575859c06799fbb08b98020faae1d32d6c37f08ad8'
 
 PRODUCTOS = [
     {
