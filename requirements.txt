@@ -1,0 +1,21 @@
+# Dependencias para la Mini Tienda Virtual
+# Flask - Framework web principal
+Flask==2.3.3
+
+# Werkzeug - Utilidades WSGI (incluido con Flask)
+Werkzeug==2.3.7
+
+# Jinja2 - Motor de plantillas (incluido con Flask)
+Jinja2==3.1.2
+
+# MarkupSafe - Escape seguro de HTML (dependencia de Jinja2)
+MarkupSafe==2.1.3
+
+# click - Interface de línea de comandos (dependencia de Flask)
+click==8.1.7
+
+# itsdangerous - Firma segura de datos (para sesiones)
+itsdangerous==2.1.2
+
+# blinker - Señales para Flask
+blinker==1.6.3

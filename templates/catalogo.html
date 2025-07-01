@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Catálogo - TechStore{% endblock %}
+
+{% block content %}
+<h1 class="mb-4 text-center">Nuestros Productos</h1>
+
+<div class="row">
+    {% for producto in productos %}
+    <div class="col-md-4">
+        <div class="card h-100">
+            <img src="{{ producto.imagen }}" class="card-img-top" alt="{{ producto.nombre }}" style="height: 200px; object-fit: cover;">
+            <div class="card-body">
+                <h5 class="card-title">{{ producto.nombre }}</h5>
+                <p class="card-text">{{ producto.descripcion }}</p>
+                <div class="price mb-3">${{ "%.2f"|format(producto.precio) }}</div>
+                <a href="{{ url_for('agregar', id_producto=producto.id) }}" class="btn btn-primary w-100">
+                    <i class="bi bi-cart-plus"></i> Agregar al carrito
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
